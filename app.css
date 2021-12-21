@@ -42,6 +42,13 @@ body {
   z-index: -1;
 }
 
+/* Internet Explorer Compatibility: Removed the Blob background animation because IE browser does not support it */
+@media all and (-ms-high-contrast: none), (-ms-high-contrast: active) {
+  .blob__container {
+    display: none !important;
+  }
+}
+
 .blob__container-inner {
   position: absolute;
   width: calc(100vw / 2);
@@ -64,19 +71,22 @@ body {
   border-radius: 100%;
   position: fixed;
   transform: rotateZ(90deg);
-  background-color: red;
   background: conic-gradient(
     hsl(318, 87%, 52%),
     hsl(42, 100%, 50%),
     hsl(133, 63%, 52%),
     hsl(248, 71%, 53%)
   );
-  filter: blur(140px);
-  /* -webkit-filter: blur(600px); */
-  /* backdrop-filter: blur(100px); */
+  filter: blur(70px);
   opacity: 40%;
 }
 
+/* FireFox Compatibility: Changed the blur settings on FireFox to achieve similar blob style across all browsers */
+@-moz-document url-prefix() {
+  .blob {
+    filter: blur(190px);
+  }
+}
 
 .blob-one {
   position: fixed;
