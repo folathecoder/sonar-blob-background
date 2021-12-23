@@ -59,8 +59,8 @@ body {
     hsl(133, 63%, 52%),
     hsl(248, 71%, 53%)
   );
-  filter: blur(60px);
-  opacity: 30%;
+  /* filter: blur(60px);
+  opacity: 30%; */
 }
 
 @media screen and (max-width: 1139px) {
@@ -81,23 +81,23 @@ body {
   .blob {
     height: calc(100vh / 6);
     width: calc(100vh / 6);
-    filter: blur(60px);
-    opacity: 40%;
+    /* filter: blur(60px);
+    opacity: 40%; */
   }
 }
 
 /* FireFox Compatibility: Changed the blur settings on FireFox to achieve similar blob style across all browsers */
 @-moz-document url-prefix() {
-  .blob {
+  /* .blob {
     filter: blur(60px);
       opacity: 30%;
-  }
+  } */
 
   @media screen and (max-width: 450px) {
-  .blob {
+  /* .blob {
     filter: blur(50px);
       opacity: 30%;
-  }
+  } */
 }
 }
 
