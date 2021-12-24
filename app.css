@@ -23,7 +23,7 @@
 }
 
 body {
-  background-color: hsl(252, 33%, 12%);
+  background: rgb(26, 20, 41);
   overflow-x: hidden;
   position: relative;
 }
@@ -38,6 +38,18 @@ body {
   left: 0;
   right: 0;
   z-index: -1;
+  background: linear-gradient(
+      160deg,
+      rgba(51, 210, 133, 0.1),
+      rgba(51, 210, 133, 0.01),
+      rgba(26, 34, 47, 0) 40%
+    ),
+    linear-gradient(
+      345deg,
+      rgba(255, 0, 49, 0.1),
+      rgba(255, 0, 49, 0.005),
+      rgba(255, 0, 49, 0) 50%
+    );
 }
 
 /* Internet Explorer Compatibility: Removed the Blob background animation because IE browser does not support it */
@@ -47,6 +59,7 @@ body {
   }
 }
 
+/*Note: This class controls all blobs */
 .blob {
   height: calc(100vh / 2);
   width: calc(100vh / 2);
@@ -203,7 +216,7 @@ body {
 
 @keyframes blob-three {
   0% {
-    transform: translateY(50vh) scaleX(1) scaleY(1) rotateZ(200deg) skewX(15deg);
+    transform: translateY(30vh) scaleX(1) scaleY(1) rotateZ(200deg) skewX(15deg);
   }
   10% {
     transform: translateY(10vh) scaleX(0.8) scaleY(0.8) rotateZ(20deg)
