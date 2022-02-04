@@ -72,7 +72,7 @@ body {
     hsl(133, 63%, 52%),
     hsl(248, 71%, 53%)
   );
-  filter: blur(60px);
+  filter: blur(61px);
   opacity: 30%;
 }
 
