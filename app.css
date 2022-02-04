@@ -59,8 +59,8 @@ body {
 .blob::before {
 	content: '';
 	background-image: linear-gradient(
-			hsla(257, 34%, 12%, 0.801),
-			hsla(257, 34%, 12%, 0.671)
+			hsla(257, 34%, 12%, 0.808),
+			hsla(257, 34%, 12%, 0.651)
 		),
 		url(images/blob-blurred.png);
 	position: fixed;
@@ -73,7 +73,6 @@ body {
 	left: 0;
 	right: 0;
 	bottom: 0;
-	filter: blur(10px);
 	margin: -150px;
 }
 
@@ -248,6 +247,7 @@ body {
 			skewX(0deg);
 	}
 	100% {
-		transform: translateY(50vh) scaleX(0.8) scaleY(0.8) rotateZ(0deg) skewX(0deg);
+		transform: translateY(50vh) scaleX(0.8) scaleY(0.8) rotateZ(0deg)
+			skewX(0deg);
 	}
 }
